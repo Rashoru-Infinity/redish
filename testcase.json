@@ -1,0 +1,8 @@
+{
+	"Redish-Options": {
+		"Port": "8080"
+	},
+	"Redis-Client-Options": {
+		"Addr": "localhost:6379"
+	}
+}
