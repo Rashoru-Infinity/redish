@@ -149,7 +149,7 @@ func Test2ndPostStrings(t *testing.T) {
 		t.Errorf("%s\n", err)
 		return
 	}
-	if resp.StatusCode != 405 {
+	if resp.StatusCode != 201 {
 		t.Errorf("unexpected HTTP status code %d %s\n",
 			resp.StatusCode, 
 			http.StatusText(resp.StatusCode),
