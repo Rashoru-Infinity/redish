@@ -67,16 +67,12 @@ func HandleStrings(w http.ResponseWriter, r *http.Request) {
 			http.Error(w, http.StatusText(500), 500)
 			return
 		}
-		if keyCount == 0 {
-			http.Error(w, http.StatusText(405), 405)
-			return
-		}
 		if err := rc.Set(ctx, *key, *value, 0).Err(); err != nil {
 			http.Error(w, http.StatusText(500), 500)
 			return
 		}
-		if err != nil {
-			http.Error(w, http.StatusText(500), 500)
+		if keyCount == 0 {
+			http.Error(w, http.StatusText(201), 201)
 			return
 		}
 		http.Error(w, http.StatusText(204), 204)
